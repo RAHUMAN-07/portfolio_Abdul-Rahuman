@@ -39,8 +39,22 @@ const initMenu = () => {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
   if (!menuToggle || !navMenu) return;
+
+  const setMenuState = (isOpen) => {
+    navMenu.classList.toggle('active', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  };
+
   menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    setMenuState(!navMenu.classList.contains('active'));
+  });
+
+  navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (navMenu.classList.contains('active')) {
+        setMenuState(false);
+      }
+    });
   });
 };
 
