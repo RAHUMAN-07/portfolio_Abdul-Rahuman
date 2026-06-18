@@ -1,4 +1,4 @@
-const animateChart = () => {
+﻿const animateChart = () => {
   const el = document.getElementById('accuracyChart');
   if (!el) return;
   const valueEl = el.querySelector('.chart-value');
@@ -35,6 +35,15 @@ const initReveal = () => {
   elements.forEach((el) => observer.observe(el));
 };
 
+const initMenu = () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  if (!menuToggle || !navMenu) return;
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+};
+
 const initForm = () => {
   const form = document.getElementById('connectForm');
   const feedback = document.getElementById('formFeedback');
@@ -60,5 +69,6 @@ const initForm = () => {
 window.addEventListener('DOMContentLoaded', () => {
   initReveal();
   animateChart();
+  initMenu();
   initForm();
 });

@@ -1,27 +1,25 @@
-# Abdul Rahuman A — Portfolio
+﻿# Abdul Rahuman A — Portfolio
 
-A static portfolio website for Abdul Rahuman A, built with HTML, CSS, and JavaScript.
+Personal portfolio website for Abdul Rahuman A, created with HTML, CSS, and JavaScript.
 
-## Features
+## What is included
 
-- Animated hero section with profile photo and name
+- Hero landing page with animated profile section
+- Responsive mobile navigation menu
 - Scroll reveal animations for every section
-- Skills, experience, projects, and certifications
-- Interactive contact form with name, email, and mobile number fields
-- GitHub Pages deployment workflow included
+- Skills, experience, project showcase, and contact form
+- Live deployment via GitHub Pages
 
-## Local preview
+## Preview locally
 
 Open `index.html` in your browser.
 
-## Live deployment
+## Live site
 
-This repository is set up for GitHub Pages.
-
-Visit:
+Your site is deployed at:
 
 `https://RAHUMAN-07.github.io/portfolio_Abdul-Rahuman/`
 
 ## Notes
 
-- `profile.svg` is a placeholder image in the repo. Replace it with your own photo file if desired.
+- `profile.svg` is a placeholder; replace it with a personal profile image if you want your actual photo displayed.
