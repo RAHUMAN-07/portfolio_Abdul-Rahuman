@@ -1,15 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
+const animateChart = () => {
   const el = document.getElementById('accuracyChart');
   if (!el) return;
   const valueEl = el.querySelector('.chart-value');
   const target = 92;
   let current = 0;
-  const duration = 900; // ms
+  const duration = 1200;
   const fps = 60;
   const steps = Math.round((duration / 1000) * fps);
   const increment = target / steps;
 
-  // animate
   const id = setInterval(() => {
     current += increment;
     if (current >= target) {
@@ -17,13 +16,49 @@ document.addEventListener('DOMContentLoaded', function () {
       clearInterval(id);
     }
     const rounded = Math.round(current);
-    valueEl.textContent = rounded + '%';
+    valueEl.textContent = `${rounded}%`;
     el.style.background = `conic-gradient(var(--accent) ${rounded}%, rgba(255,255,255,0.06) ${rounded}% 100%)`;
   }, duration / steps);
+};
 
-  // ensure final state
-  setTimeout(() => {
-    valueEl.textContent = target + '%';
-    el.style.background = `conic-gradient(var(--accent) ${target}%, rgba(255,255,255,0.06) ${target}% 100%)`;
-  }, duration + 30);
+const initReveal = () => {
+  const elements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach((el) => observer.observe(el));
+};
+
+const initForm = () => {
+  const form = document.getElementById('connectForm');
+  const feedback = document.getElementById('formFeedback');
+  if (!form || !feedback) return;
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const name = formData.get('name')?.toString().trim();
+    const email = formData.get('email')?.toString().trim();
+    const mobile = formData.get('mobile')?.toString().trim();
+
+    if (!name || !email || !mobile) {
+      feedback.textContent = 'Please complete all required fields.';
+      return;
+    }
+
+    feedback.textContent = `Thanks ${name}! I will contact you soon on ${email}.`;
+    form.reset();
+  });
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+  initReveal();
+  animateChart();
+  initForm();
 });

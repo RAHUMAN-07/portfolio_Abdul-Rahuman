@@ -7,94 +7,161 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Abdul Rahuman A</h1>
-      <p class="subtitle">Computer Science Student | Aspiring Machine Learning Engineer</p>
-      <nav class="links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="hero-copy" data-animate>
+          <span class="eyebrow">Hello, I'm</span>
+          <h1>Abdul Rahuman A</h1>
+          <p class="subtitle">Computer Science student & aspiring Machine Learning Engineer focused on building data-driven applications and production-ready APIs.</p>
+          <div class="hero-badges">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>Flask</span>
+          </div>
+          <div class="hero-actions">
+            <a href="#contact" class="button">Connect with me</a>
+            <a href="#projects" class="button secondary">Projects</a>
+          </div>
+        </div>
 
-  <main class="container">
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p>Dynamic Computer Science student at V.S.B. College of Engineering with a focus on Algorithms, Data Structures, and Machine Learning. Passionate about leveraging data to solve real-world problems. Proven experience in developing end-to-end ML models and deploying them through scalable APIs. Committed to building impactful tech solutions and continuously learning new technologies.</p>
-    </section>
-
-    <section id="skills" class="card two-column">
-      <h2>Technical Skills</h2>
-      <div>
-        <h3>Languages</h3>
-        <p>Python (Proficient), Java (Intermediate), SQL, HTML</p>
+        <div class="hero-profile" data-animate>
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-glow"></div>
+            <img src="profile.svg" alt="Profile photo of Abdul Rahuman" class="hero-photo">
+          </div>
+          <div class="hero-profile-card">
+            <strong>V.S.B. College of Engineering</strong>
+            <p>Data science, algorithms, and machine learning project development.</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>ML / Data Science</h3>
-        <p>Scikit-learn, TensorFlow, Pandas, NumPy</p>
+    </header>
+
+    <main class="container">
+      <section id="about" class="section card reveal">
+        <div class="section-heading">
+          <span class="section-label">About Me</span>
+          <h2>Empowering intelligent systems with strong problem-solving skills.</h2>
+        </div>
+        <p>Dynamic Computer Science student at V.S.B. College of Engineering with a focus on Algorithms, Data Structures, and Machine Learning. Passionate about leveraging data to solve real-world problems. Proven experience in developing end-to-end ML models and deploying them through scalable APIs. Committed to building impactful tech solutions and continuously learning new technologies.</p>
+      </section>
+
+      <section id="skills" class="section card reveal">
+        <div class="section-heading">
+          <span class="section-label">Skills</span>
+          <h2>Technical expertise I use daily.</h2>
+        </div>
+        <div class="skill-grid">
+          <article>
+            <h3>Languages</h3>
+            <p>Python, Java, SQL, HTML</p>
+          </article>
+          <article>
+            <h3>ML & Data Science</h3>
+            <p>Scikit-learn, TensorFlow, Pandas, NumPy</p>
+          </article>
+          <article>
+            <h3>Tools & Platforms</h3>
+            <p>Flask, MySQL, Git/GitHub, VS Code</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section card reveal">
+        <div class="section-heading">
+          <span class="section-label">Experience</span>
+          <h2>What I have built professionally.</h2>
+        </div>
+        <div class="info-grid">
+          <article>
+            <h3>Python For Machine Learning Intern</h3>
+            <p><strong>VEI Technologies, Coimbatore</strong></p>
+            <ul>
+              <li>Customer churn model with Scikit-learn and TensorFlow — <strong>92% accuracy</strong>.</li>
+              <li>Preprocessing pipelines using Pandas and NumPy for scalable data flows.</li>
+              <li>Flask API deployment with a <strong>40% faster inference path</strong>.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section card reveal">
+        <div class="section-heading">
+          <span class="section-label">Projects</span>
+          <h2>Featured work and impact.</h2>
+        </div>
+        <div class="project-grid">
+          <article>
+            <h3>The Thermo-Autonomous Watch</h3>
+            <p>Developed a self-sustaining timepiece that uses thermoelectric generators to convert body heat into electricity. Built hardware-software integration for thermal energy management.</p>
+            <a href="https://github.com/RAHUMAN-07" target="_blank" rel="noopener">View repository</a>
+          </article>
+
+          <article class="project-highlight">
+            <h3>Customer Churn Prediction</h3>
+            <p>Designed and tuned an end-to-end churn prediction model to improve retention decisions.</p>
+            <div class="chart" id="accuracyChart"><span class="chart-value">0%</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="certs" class="section card reveal">
+        <div class="section-heading">
+          <span class="section-label">Certifications</span>
+          <h2>Training I have completed.</h2>
+        </div>
+        <ul class="cert-list">
+          <li>Programming in Python</li>
+          <li>Python for Machine Learning</li>
+          <li>Data Science</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section card reveal contact-section">
+        <div class="section-heading">
+          <span class="section-label">Let's Connect</span>
+          <h2>Enter your details to start a conversation.</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <p>Have a question, collaboration idea, or internship opportunity? Share your details below and I will reach out.</p>
+            <ul class="contact-list">
+              <li>GitHub: <a href="https://github.com/RAHUMAN-07" target="_blank" rel="noopener">github.com/RAHUMAN-07</a></li>
+              <li>LeetCode: <a href="https://leetcode.com/in/abdul_rahuman_07" target="_blank" rel="noopener">leetcode.com/in/abdul_rahuman_07</a></li>
+              <li>LinkedIn: <a href="https://linkedin.com/in/abdul-rahuman" target="_blank" rel="noopener">linkedin.com/in/abdul-rahuman</a></li>
+            </ul>
+          </div>
+          <form id="connectForm" class="contact-form">
+            <label>
+              Full Name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label>
+              Email Address
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+            <label>
+              Mobile Number
+              <input type="tel" name="mobile" placeholder="9876543210" pattern="[0-9]{10}" required>
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Tell me about your project or question"></textarea>
+            </label>
+            <button type="submit" class="button">Send Message</button>
+            <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Abdul Rahuman A — Built for machine learning and product design.</p>
       </div>
-      <div>
-        <h3>Tools & Platforms</h3>
-        <p>Flask (API Deployment), MySQL, Git/GitHub, VS Code</p>
-      </div>
-    </section>
-
-    <section id="experience" class="card">
-      <h2>Key Experience</h2>
-      <h3>Python For Machine Learning Intern | VEI Technologies, Coimbatore</h3>
-      <ul>
-        <li><strong>Customer Churn Prediction:</strong> Developed a predictive model using Scikit-learn and TensorFlow achieving <strong>92% accuracy</strong>.</li>
-        <li><strong>Data Pipeline Engineering:</strong> Built efficient preprocessing pipelines using Pandas and NumPy to handle large-scale datasets.</li>
-        <li><strong>Model Deployment:</strong> Collaborated on deploying ML models via Flask APIs, optimizing inference time by <strong>40%</strong>.</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="card">
-      <h2>Featured Projects</h2>
-      <article>
-        <h3>The Thermo-Autonomous Watch</h3>
-        <p><em>Concept:</em> Developed a self-sustaining timepiece that uses thermoelectric generators to convert body heat into electricity.</p>
-        <p><em>Impact:</em> Eliminated the need for batteries or external charging.</p>
-        <p><em>Technical Focus:</em> Hardware-software integration and thermal energy management.</p>
-        <p><a href="https://github.com/RAHUMAN-07" target="_blank" rel="noopener">View Repository</a></p>
-      </article>
-
-      <article class="model-card">
-        <h3>Customer Churn Prediction</h3>
-        <p>Built ML model with Scikit-learn and TensorFlow. Achieved <strong>92% accuracy</strong>.</p>
-        <div class="chart" id="accuracyChart"><span class="chart-value">0%</span></div>
-      </article>
-    </section>
-
-    <section id="certs" class="card">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Programming in Python</li>
-        <li>Python for Machine Learning</li>
-        <li>Data Science</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Connect</h2>
-      <ul class="contact-list">
-        <li>GitHub: <a href="https://github.com/RAHUMAN-07" target="_blank" rel="noopener">github.com/RAHUMAN-07</a></li>
-        <li>LeetCode: <a href="https://leetcode.com/in/abdul_rahuman_07" target="_blank" rel="noopener">leetcode.com/in/abdul_rahuman_07</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/abdul-rahuman" target="_blank" rel="noopener">linkedin.com/in/abdul-rahuman</a></li>
-        <li>Email: <a href="mailto:rahumanlmmcabdul@gmail.com">rahumanlmmcabdul@gmail.com</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© Abdul Rahuman A — Computer Science Student</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
