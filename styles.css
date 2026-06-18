@@ -40,6 +40,8 @@ button,input,textarea{font:inherit}
 .button:hover{transform:translateY(-2px);box-shadow:0 24px 58px rgba(20,184,166,0.24);background:var(--accent-strong)}
 .secondary{background:rgba(255,255,255,0.06);color:#fff;border:1px solid rgba(255,255,255,0.13)}
 .secondary:hover{background:rgba(255,255,255,0.10)}
+.button.download{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--text)}
+.button.download:hover{background:rgba(255,255,255,0.04)}
 .hero-social{display:flex;flex-wrap:wrap;gap:16px;margin-top:30px}
 .hero-social a{color:var(--muted);text-decoration:none;font-weight:700;transition:color .15s ease}
 .hero-social a:hover{color:var(--accent)}
